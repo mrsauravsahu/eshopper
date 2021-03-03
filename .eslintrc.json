@@ -27,7 +27,8 @@
             "error",
             {
                 "extensions": [
-                    ".tsx"
+                    ".tsx",
+                    ".jsx"
                 ]
             }
         ],

@@ -8,7 +8,7 @@ console.log('starting esbuild build...');
 
 esbuild
   .build({
-    entryPoints: ['src/index.tsx'],
+    entryPoints: ['src/index.jsx'],
     bundle: true,
     outfile: 'esbuild-bundle/dist/index.js',
     minify: true,
