@@ -1,0 +1,30 @@
+.welcome {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #00000031;
+    padding: 1rem 4rem;
+    border-radius: 1rem;
+
+    box-shadow: 0.25rem 0.25rem 1rem #00000074;
+}
+
+.welcome>p {
+    color: white;
+}
+
+.welcome__react {
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 2rem 0.25rem 0.25rem 0.25rem;
+}
+
+.welcome__poweredBy {
+    font-size: 1.5rem;
+}
+
+.welcome__poweredBy__tech {
+    filter: blur(0.125rem);
+}
