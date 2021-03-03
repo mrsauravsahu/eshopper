@@ -1,5 +1,5 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { Welcome } from './components/welcome/welcome';
+import { App } from './app/app';
 
-ReactDOM.render(<Welcome />, document.querySelector('main'));
+ReactDOM.render(<App />, document.querySelector('main'));
