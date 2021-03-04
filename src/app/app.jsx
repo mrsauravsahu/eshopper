@@ -102,12 +102,30 @@ export class App extends React.Component {
     };
   }
 
-  onIncrement = () => {
-
+  onIncrement = (id, currentQuantity) => {
+    this.setState((prevState) => {
+      const newState = {
+        ...prevState,
+        products: prevState.products.map((product) => (product.id !== id ? product : {
+          ...product,
+          quantityInBasket: currentQuantity + 1,
+        })),
+      };
+      this.setState(newState);
+    });
   }
 
-  onDecrement = () => {
-
+  onDecrement = (id, currentQuantity) => {
+    this.setState((prevState) => {
+      const newState = {
+        ...prevState,
+        products: prevState.products.map((product) => (product.id !== id ? product : {
+          ...product,
+          quantityInBasket: currentQuantity - 1,
+        })),
+      };
+      this.setState(newState);
+    });
   }
 
   render = () => {
