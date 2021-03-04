@@ -1,0 +1,21 @@
+.product {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.25rem;
+
+    width: 20%;
+    margin: 0.25rem;
+    padding: 1rem;
+
+    box-shadow: 0rem 0rem 0.25rem #9a9a9a;
+}
+
+.product__manufacturer{
+    text-transform: uppercase;
+    color: gray;
+    font-size: 0.75rem;
+}
+
+.product__name {
+    font-weight: 400;
+}

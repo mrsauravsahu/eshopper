@@ -1,0 +1,10 @@
+nav {
+    background-color: rgb(171, 171, 171);
+    padding: 1rem;
+}
+
+.nav__brand {
+    font-weight: 800;
+    text-transform: uppercase;
+    color: white;
+}
