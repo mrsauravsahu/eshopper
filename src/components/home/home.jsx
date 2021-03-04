@@ -1,5 +1,7 @@
 import React from 'react';
-import { Product } from '../product/product';
+import PropTypes from 'prop-types';
+
+import { Product, ProductPropType } from '../product/product';
 
 import styles from './home.module.css';
 
@@ -10,3 +12,11 @@ export const Home = ({ products }) => (
     ))}
   </div>
 );
+
+Home.propTypes = {
+  products: PropTypes.arrayOf(ProductPropType),
+};
+
+Home.defaultProps = {
+  products: [],
+};
