@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Product, ProductPropType } from '../product/product';
+import { Product, ProductPropType } from '../../components/product/product';
 
 import styles from './home.module.css';
 

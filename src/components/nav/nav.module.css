@@ -6,11 +6,16 @@
     align-items: center;
 }
 
+.nav > a {
+    text-decoration: none;
+}
+
 .basketLink {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     font-weight: 800;
+    color: black;
 }
 
 .brand {

@@ -1,5 +1,8 @@
 import React from 'react';
-import { Home } from '../components/home/home';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+
+import { Home } from '../pages/home/home';
+import { Cart } from '../pages/cart/cart';
 import { Nav } from '../components/nav/nav';
 
 export class App extends React.Component {
@@ -30,7 +33,7 @@ export class App extends React.Component {
         },
         {
           id: 3,
-          name: 'Stawberry',
+          name: 'Strawberry',
           manufacturer: 'FreshO',
           unitQuantity: '1kg',
           unitPrice: 80,
@@ -134,17 +137,24 @@ export class App extends React.Component {
     const { products } = this.state;
 
     return (
-      <>
+      <BrowserRouter>
         <Nav cartCount={products.reduce((
           accumulator, product,
         ) => accumulator + product.quantityInBasket, 0)}
         />
-        <Home
-          products={products}
-          onIncrement={(id, currentQuantity) => this.onIncrement(id, currentQuantity)}
-          onDecrement={(id, currentQuantity) => this.onDecrement(id, currentQuantity)}
-        />
-      </>
+        <Switch>
+          <Route path="/cart">
+            <Cart />
+          </Route>
+          <Route path="/">
+            <Home
+              products={products}
+              onIncrement={(id, currentQuantity) => this.onIncrement(id, currentQuantity)}
+              onDecrement={(id, currentQuantity) => this.onDecrement(id, currentQuantity)}
+            />
+          </Route>
+        </Switch>
+      </BrowserRouter>
     );
   }
 }
