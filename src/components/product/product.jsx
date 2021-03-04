@@ -10,6 +10,7 @@ export const ProductPropType = {
   imageUrl: PropTypes.string.isRequired,
   unitQuantity: PropTypes.string.isRequired,
   quantityInBasket: PropTypes.number.isRequired,
+  quantityAvailable: PropTypes.number.isRequired,
 };
 
 export const Product = ({ product }) => (
@@ -24,7 +25,10 @@ export const Product = ({ product }) => (
     <div className={styles.unitQuantity}>{product.unitQuantity}</div>
     <div className={styles.cartSection}>
       {`MRP ₹${product.unitPrice}/-`}
-      <QuantityCounter quantityInBasket={product.quantityInBasket} />
+      <QuantityCounter
+        quantityInBasket={product.quantityInBasket}
+        quantityAvailable={product.quantityAvailable}
+      />
     </div>
   </div>
 );

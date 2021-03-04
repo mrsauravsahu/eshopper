@@ -21,7 +21,7 @@
 }
 
 .image {
-    height: 100%;
+    height: 16rem;
 }
 
 .name {
@@ -35,4 +35,5 @@
     margin: .5rem 0 0 0;
     padding: 1rem ;
     font-weight: 800;
+    border-radius: 0.5rem;
 }

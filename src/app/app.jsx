@@ -66,7 +66,7 @@ export class App extends React.Component {
           unitPrice: 80,
           imageUrl: 'img/fruits/pineapple.png',
           quantityInBasket: 0,
-          quantityAvailable: 4,
+          quantityAvailable: 0,
         },
         {
           id: 7,
