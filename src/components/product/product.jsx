@@ -24,7 +24,7 @@ export const Product = ({ product }) => (
     <div className={styles.unitQuantity}>{product.unitQuantity}</div>
     <div className={styles.cartSection}>
       {`MRP ₹${product.unitPrice}/-`}
-      <QuantityCounter quantity={product.quantityInBasket} />
+      <QuantityCounter quantityInBasket={product.quantityInBasket} />
     </div>
   </div>
 );
