@@ -14,7 +14,7 @@ export const Home = ({ products }) => (
 );
 
 Home.propTypes = {
-  products: PropTypes.arrayOf(ProductPropType),
+  products: PropTypes.arrayOf(PropTypes.shape(ProductPropType)),
 };
 
 Home.defaultProps = {

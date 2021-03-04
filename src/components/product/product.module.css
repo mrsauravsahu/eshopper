@@ -10,12 +10,28 @@
     box-shadow: 0rem 0rem 0.25rem #9a9a9a;
 }
 
+.unitQuantity {
+    margin: 0.5rem 0;
+}
+
 .manufacturer{
     text-transform: uppercase;
     color: gray;
-    font-size: 0.75rem;
+    font-size: 0.5rem;
+}
+
+.image {
+    height: 100%;
 }
 
 .name {
     font-weight: 400;
+}
+
+.cartSection {
+    display: flex;
+    background-color: #F4F3F1;
+    margin: .5rem 0 0 0;
+    padding: 1rem ;
+    font-weight: 800;
 }
