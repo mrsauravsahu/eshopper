@@ -13,7 +13,7 @@ export const ProductPropType = {
   quantityAvailable: PropTypes.number.isRequired,
 };
 
-export const Product = ({ product }) => (
+export const Product = ({ product, onIncrement, onDecrement }) => (
   <div className={styles.container}>
     <img
       src={product.imageUrl}
@@ -28,6 +28,8 @@ export const Product = ({ product }) => (
       <QuantityCounter
         quantityInBasket={product.quantityInBasket}
         quantityAvailable={product.quantityAvailable}
+        onIncrement={onIncrement}
+        onDecrement={onDecrement}
       />
     </div>
   </div>
@@ -35,4 +37,6 @@ export const Product = ({ product }) => (
 
 Product.propTypes = {
   product: PropTypes.shape(ProductPropType).isRequired,
+  onIncrement: PropTypes.func.isRequired,
+  onDecrement: PropTypes.func.isRequired,
 };

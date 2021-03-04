@@ -15,6 +15,7 @@ export const QuantityCounter = ({
         <button
           className={`${styles.reduceQuantityButton} ${styles.quantityButton}`}
           type="button"
+          onClick={onDecrement}
         >
           -
         </button>
@@ -22,6 +23,7 @@ export const QuantityCounter = ({
         <button
           className={`${styles.incrementQuantityButton} ${styles.quantityButton}`}
           type="button"
+          onClick={onIncrement}
         >
           +
         </button>

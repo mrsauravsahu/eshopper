@@ -102,13 +102,25 @@ export class App extends React.Component {
     };
   }
 
+  onIncrement = () => {
+
+  }
+
+  onDecrement = () => {
+
+  }
+
   render = () => {
     const { products } = this.state;
 
     return (
       <>
         <Nav />
-        <Home products={products} />
+        <Home
+          products={products}
+          onIncrement={(id, currentQuantity) => this.onIncrement(id, currentQuantity)}
+          onDecrement={(id, currentQuantity) => this.onDecrement(id, currentQuantity)}
+        />
       </>
     );
   }
