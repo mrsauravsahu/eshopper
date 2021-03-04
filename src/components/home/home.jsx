@@ -1,10 +1,10 @@
 import React from 'react';
 import { Product } from '../product/product';
 
-import './home.css';
+import styles from './home.module.css';
 
 export const Home = ({ products }) => (
-  <div className="home__products">
+  <div className={styles.products}>
     {products.map((product) => (
       <Product product={product} />
     ))}
