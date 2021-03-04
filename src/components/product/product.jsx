@@ -14,7 +14,7 @@ export const ProductPropType = {
 };
 
 export const Product = ({ product, onIncrement, onDecrement }) => (
-  <div className={styles.container}>
+  <div className={`${styles.container} ${product.quantityAvailable === 0 ? styles.containerProductSoldOut : ''}`}>
     <img
       src={product.imageUrl}
       alt={`Purchase ${product.name}`}
