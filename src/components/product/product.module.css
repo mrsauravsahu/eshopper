@@ -30,6 +30,7 @@
 
 .cartSection {
     display: flex;
+    flex-direction: column;
     background-color: #F4F3F1;
     margin: .5rem 0 0 0;
     padding: 1rem ;

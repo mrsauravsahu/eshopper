@@ -15,6 +15,7 @@ export class App extends React.Component {
           unitQuantity: '1kg',
           unitPrice: 40,
           imageUrl: 'img/fruits/apple.png',
+          quantityInBasket: 0,
         },
         {
           id: 2,
@@ -23,6 +24,7 @@ export class App extends React.Component {
           unitQuantity: '1kg',
           unitPrice: 80,
           imageUrl: 'img/fruits/mango.png',
+          quantityInBasket: 0,
         },
         {
           id: 3,
@@ -31,6 +33,7 @@ export class App extends React.Component {
           unitQuantity: '1kg',
           unitPrice: 80,
           imageUrl: 'img/fruits/strawberry.png',
+          quantityInBasket: 0,
         },
         {
           id: 4,
@@ -39,6 +42,7 @@ export class App extends React.Component {
           unitQuantity: '1kg',
           unitPrice: 80,
           imageUrl: 'img/fruits/peach.png',
+          quantityInBasket: 0,
         },
         {
           id: 5,
@@ -47,6 +51,7 @@ export class App extends React.Component {
           unitQuantity: '1kg',
           unitPrice: 80,
           imageUrl: 'img/fruits/grape.png',
+          quantityInBasket: 0,
         },
         {
           id: 6,
@@ -55,6 +60,7 @@ export class App extends React.Component {
           unitQuantity: '1kg',
           unitPrice: 80,
           imageUrl: 'img/fruits/pineapple.png',
+          quantityInBasket: 0,
         },
         {
           id: 7,
@@ -63,6 +69,7 @@ export class App extends React.Component {
           unitQuantity: '1kg',
           unitPrice: 80,
           imageUrl: 'img/fruits/banana.png',
+          quantityInBasket: 0,
         },
         {
           id: 8,
@@ -71,6 +78,7 @@ export class App extends React.Component {
           unitQuantity: '1kg',
           unitPrice: 80,
           imageUrl: 'img/fruits/cherry.png',
+          quantityInBasket: 0,
         },
         {
           id: 9,
@@ -79,6 +87,7 @@ export class App extends React.Component {
           unitQuantity: '1kg',
           unitPrice: 80,
           imageUrl: 'img/fruits/orange.png',
+          quantityInBasket: 0,
         },
       ],
     };
