@@ -1,7 +1,6 @@
 import React from 'react';
 import { Home } from '../components/home/home';
 import { Nav } from '../components/nav/nav';
-import { Product } from '../components/product/product';
 
 export class App extends React.Component {
   constructor() {
