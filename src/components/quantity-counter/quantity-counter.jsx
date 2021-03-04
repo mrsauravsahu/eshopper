@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import styles from './quantity-counter.module.css';
 
@@ -23,3 +24,9 @@ export const QuantityCounter = ({
     </button>
   </div>
 );
+
+QuantityCounter.propTypes = {
+  quantityInBasket: PropTypes.number.isRequired,
+  onIncrement: PropTypes.func.isRequired,
+  onDecrement: PropTypes.func.isRequired,
+};
