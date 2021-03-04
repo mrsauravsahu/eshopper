@@ -116,6 +116,8 @@ export class App extends React.Component {
   }
 
   onDecrement = (id, currentQuantity) => {
+    if (currentQuantity === 0) return;
+
     this.setState((prevState) => {
       const newState = {
         ...prevState,
