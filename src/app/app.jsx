@@ -1,6 +1,7 @@
 import React from 'react';
 import { Home } from '../components/home/home';
 import { Nav } from '../components/nav/nav';
+import { Product } from '../components/product/product';
 
 export class App extends React.Component {
   constructor() {
@@ -135,7 +136,10 @@ export class App extends React.Component {
 
     return (
       <>
-        <Nav />
+        <Nav cartCount={products.reduce((
+          accumulator, product,
+        ) => accumulator + product.quantityInBasket, 0)}
+        />
         <Home
           products={products}
           onIncrement={(id, currentQuantity) => this.onIncrement(id, currentQuantity)}
