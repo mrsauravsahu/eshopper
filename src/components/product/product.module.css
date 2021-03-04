@@ -1,4 +1,4 @@
-.product {
+.container {
     display: flex;
     flex-direction: column;
     border-radius: 0.25rem;
@@ -10,12 +10,12 @@
     box-shadow: 0rem 0rem 0.25rem #9a9a9a;
 }
 
-.product__manufacturer{
+.manufacturer{
     text-transform: uppercase;
     color: gray;
     font-size: 0.75rem;
 }
 
-.product__name {
+.name {
     font-weight: 400;
 }
