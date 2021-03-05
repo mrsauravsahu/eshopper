@@ -42,6 +42,19 @@
     border-radius: 0.5rem;
 }
 
+
+@media (max-width: 72rem) {
+    .container {
+        width:  calc((100% - (6 * 0.25rem + 6 * 1rem)) / 3);
+    }
+}
+
+@media (max-width: 48rem) {
+    .container {
+        width:  calc((100% - (4 * 0.25rem + 4 * 1rem)) / 2);
+    }
+}
+
 @media (max-width: 30rem) {
     .container {
         width: 100%;
