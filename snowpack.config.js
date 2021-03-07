@@ -2,8 +2,8 @@
 module.exports = {
   mount: {
     /* ... */
-    src: '/dist',
-    public: '/',
+    src: '/eshopper/dist',
+    public: '/eshopper',
   },
   plugins: [
     /* ... */

@@ -28,7 +28,7 @@ const buildDeployable = async () => {
     const indexHtmlPath = 'esbuild-bundle/index.html';
     // Just replacing the base url this way for now.
     let indexHtmlString = await fs.promises.readFile('esbuild-bundle/index.html', { encoding: 'utf-8' });
-    indexHtmlString = indexHtmlString.replace('<head>', '<head>\n\t\t<base href="https://mrsauravsahu.tech/eshopper/" />');
+    indexHtmlString = indexHtmlString.replace('http://localhost:8080/eshopper/', 'https://mrsauravsahu.tech/eshopper/');
 
     await fs.promises.writeFile(indexHtmlPath, indexHtmlString, { encoding: 'utf-8' });
 

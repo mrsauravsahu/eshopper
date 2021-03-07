@@ -1,9 +1,8 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
-
-import { Home } from '../pages/home/home';
-import { Cart } from '../pages/cart/cart';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { Nav } from '../components/nav/nav';
+import { Cart } from '../pages/cart/cart';
+import { Home } from '../pages/home/home';
 
 export class App extends React.Component {
   constructor() {
@@ -137,7 +136,7 @@ export class App extends React.Component {
     const { products } = this.state;
 
     return (
-      <BrowserRouter>
+      <BrowserRouter basename="eshopper">
         <Nav cartCount={products.reduce((
           accumulator, product,
         ) => accumulator + product.quantityInBasket, 0)}
