@@ -1,10 +1,21 @@
 .container {
     height: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
 
     font-size: 2rem;
     margin: 2rem;
     text-align: center;
+}
+
+.header {
+    font-size: 2rem;
+    font-weight: 100;
+    margin-bottom: 0.25rem;
+}
+
+.headerSeparator {
+    margin: 0;
+    width: 100%;
 }

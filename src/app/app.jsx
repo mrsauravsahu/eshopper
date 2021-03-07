@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 import { Nav } from '../components/nav/nav';
 import { Cart } from '../pages/cart/cart';
 import { Home } from '../pages/home/home';
@@ -136,14 +136,14 @@ export class App extends React.Component {
     const { products } = this.state;
 
     return (
-      <BrowserRouter basename="eshopper">
+      <HashRouter>
         <Nav cartCount={products.reduce((
           accumulator, product,
         ) => accumulator + product.quantityInBasket, 0)}
         />
         <Switch>
           <Route path="/cart">
-            <Cart />
+            <Cart cart={products.filter((product) => product.quantityInBasket > 0)} />
           </Route>
           <Route path="/">
             <Home
@@ -153,7 +153,7 @@ export class App extends React.Component {
             />
           </Route>
         </Switch>
-      </BrowserRouter>
+      </HashRouter>
     );
   }
 }
