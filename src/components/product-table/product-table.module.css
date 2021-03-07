@@ -1,0 +1,21 @@
+.container {
+  width: 90%;
+}
+
+.headerCell {
+  font-size: 1rem;
+  flex-grow: 1;
+}
+
+.itemDescriptionCell {
+  flex-grow: 4;
+}
+
+.row {
+  display: flex;
+  background-color: #555;
+  color: white;
+  text-transform: uppercase;
+  padding: 0.5rem;
+}
+
