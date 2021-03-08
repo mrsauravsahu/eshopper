@@ -8,7 +8,7 @@ export const Cart = ({ cart }) => (
   <div className={styles.container}>
     <h1 className={styles.header}>{`Your basket (${cart.length} items)`}</h1>
     <hr className={styles.headerSeparator} />
-    <ProductTable />
+    <ProductTable products={cart} />
   </div>
 );
 
