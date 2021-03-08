@@ -2,6 +2,7 @@ import React from 'react';
 import { HashRouter, Route, Switch } from 'react-router-dom';
 import { Nav } from '../components/nav/nav';
 import { Cart } from '../pages/cart/cart';
+import { Checkout } from '../pages/checkout/checkout';
 import { Home } from '../pages/home/home';
 
 export class App extends React.Component {
@@ -145,6 +146,9 @@ export class App extends React.Component {
         <Switch>
           <Route path="/cart">
             <Cart cart={products.filter((product) => product.quantityInBasket > 0)} />
+          </Route>
+          <Route path="/checkout">
+            <Checkout cart={products.filter((product) => product.quantityInBasket > 0)} />
           </Route>
           <Route path="/">
             <Home

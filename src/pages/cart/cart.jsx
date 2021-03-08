@@ -33,7 +33,7 @@ export const Cart = ({ cart }) => {
             <div className={styles.totalSection}>
               <div className={styles.totalPrice}>{`Total - ₹${totalPrice}`}</div>
               <hr />
-              <Button primary className={styles.checkoutButton}>Checkout</Button>
+              <Button primary className={styles.checkoutButton} onClick={() => history.push('/checkout')}>Checkout</Button>
             </div>
           ) : null}
       </div>
