@@ -8,7 +8,9 @@ export const Cart = ({ cart }) => (
   <div className={styles.container}>
     <h1 className={styles.header}>{`Your basket (${cart.length} items)`}</h1>
     <hr className={styles.headerSeparator} />
-    <ProductTable products={cart} />
+    {cart.length === 0
+      ? <div className={styles.emptyCartMessage}>Looks like your cart is empty 😟... </div>
+      : <ProductTable products={cart} />}
   </div>
 );
 

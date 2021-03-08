@@ -23,3 +23,11 @@
     width: 100%;
     margin-bottom: 1rem;
 }
+
+.emptyCartMessage {
+    width: 100%;
+    text-align: center;
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 1.5rem;
+}
