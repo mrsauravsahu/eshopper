@@ -57,7 +57,7 @@ export class App extends React.Component {
           unitQuantity: '1kg',
           unitPrice: 80,
           imageUrl: 'img/fruits/grape.png',
-          quantityInBasket: 0,
+          quantityInBasket: 2,
           quantityAvailable: 8,
         },
         {
@@ -77,7 +77,7 @@ export class App extends React.Component {
           unitQuantity: '1kg',
           unitPrice: 80,
           imageUrl: 'img/fruits/banana.png',
-          quantityInBasket: 0,
+          quantityInBasket: 1,
           quantityAvailable: 2,
         },
         {
@@ -87,7 +87,7 @@ export class App extends React.Component {
           unitQuantity: '1kg',
           unitPrice: 80,
           imageUrl: 'img/fruits/cherry.png',
-          quantityInBasket: 0,
+          quantityInBasket: 4,
           quantityAvailable: 11,
         },
         {

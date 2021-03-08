@@ -35,3 +35,43 @@
 .container > table {
     margin-top: 2rem;
 }
+
+.checkout {
+    display: flex;
+    width: 90%;
+    align-self: center;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.continueShopping {
+    align-self: center;
+    margin-bottom: 4rem;
+}
+
+.totalSection {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    border-radius: 0.25rem;
+    border: 1px solid rgb(189, 189, 189);
+    box-shadow: 0.125rem 0.125rem 0.25rem 0.125rem #d6d6d6;
+    padding: 1rem;
+    justify-content: space-evenly;
+    max-height: 20rem;
+}
+
+.totalSection > hr {
+    border-bottom: 1px solid gray;
+    width: 100%;
+}
+
+.totalPrice {
+    text-align: left;
+    margin: 4rem 0 2rem 0;
+}
+
+.checkoutButton {
+    align-self: flex-end;
+}
