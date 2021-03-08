@@ -8,10 +8,12 @@ export const Button = ({
   primary,
   onClick,
   className,
+  type,
 }) => (
   <button
     className={cn(className, { [styles.primary]: primary, [styles.secondary]: !primary })}
-    type="button"
+    // eslint-disable-next-line react/button-has-type
+    type={type}
     onClick={onClick}
   >
     {children}
@@ -23,9 +25,11 @@ Button.propTypes = {
   children: PropTypes.string.isRequired,
   primary: PropTypes.bool,
   onClick: PropTypes.func.isRequired,
+  type: PropTypes.oneOf('button', 'submit'),
 };
 
 Button.defaultProps = {
   className: '',
   primary: false,
+  type: 'button',
 };
