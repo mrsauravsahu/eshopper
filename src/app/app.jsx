@@ -113,7 +113,8 @@ export class App extends React.Component {
           quantityInBasket: currentQuantity + 1,
         })),
       };
-      this.setState(newState);
+
+      return newState;
     });
   }
 
@@ -128,7 +129,7 @@ export class App extends React.Component {
           quantityInBasket: currentQuantity - 1,
         })),
       };
-      this.setState(newState);
+      return newState;
     });
   }
 
