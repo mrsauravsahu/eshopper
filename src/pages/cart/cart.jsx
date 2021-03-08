@@ -1,11 +1,14 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import { Button } from '../../components/button/button';
 import { ProductTable } from '../../components/product-table/product-table';
 import { ProductPropType } from '../../components/product/product';
 import styles from './cart.module.css';
 
 export const Cart = ({ cart }) => {
+  const history = useHistory();
+
   const totalPrice = cart.reduce(
     (currentTotal, product) => currentTotal + product.unitPrice * product.quantityInBasket,
     0,
@@ -19,7 +22,12 @@ export const Cart = ({ cart }) => {
         : <ProductTable products={cart} />}
 
       <div className={styles.checkout}>
-        <Button className={styles.continueShopping}>Continue Shopping</Button>
+        <Button
+          className={styles.continueShopping}
+          onClick={() => history.push('/')}
+        >
+          Continue Shopping
+        </Button>
         {cart.length !== 0
           ? (
             <div className={styles.totalSection}>
