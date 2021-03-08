@@ -3,6 +3,7 @@
   padding: 1rem;
   border-radius: 0.25rem;
   box-shadow: 0.125rem 0.125rem 0.25rem 0.125rem #d6d6d6;
+  cursor: pointer;
 }
 
 .primary {

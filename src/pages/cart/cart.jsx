@@ -17,13 +17,17 @@ export const Cart = ({ cart }) => {
       {cart.length === 0
         ? <div className={styles.emptyCartMessage}>Looks like your cart is empty 😟... </div>
         : <ProductTable products={cart} />}
+
       <div className={styles.checkout}>
         <Button className={styles.continueShopping}>Continue Shopping</Button>
-        <div className={styles.totalSection}>
-          <div className={styles.totalPrice}>{`Total - ₹${totalPrice}`}</div>
-          <hr />
-          <Button primary className={styles.checkoutButton}>Checkout</Button>
-        </div>
+        {cart.length !== 0
+          ? (
+            <div className={styles.totalSection}>
+              <div className={styles.totalPrice}>{`Total - ₹${totalPrice}`}</div>
+              <hr />
+              <Button primary className={styles.checkoutButton}>Checkout</Button>
+            </div>
+          ) : null}
       </div>
     </div>
   );
