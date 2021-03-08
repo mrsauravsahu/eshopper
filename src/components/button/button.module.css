@@ -1,0 +1,23 @@
+.base {
+  text-transform: uppercase;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  box-shadow: 0.125rem 0.125rem 0.25rem 0.125rem #d6d6d6;
+}
+
+.primary {
+  composes: base;
+  font-size: 1.5rem;
+  background-color: #FAD873;
+  padding: 1rem 2rem;
+  border: 1px solid rgb(189, 189, 189);
+}
+
+.secondary {
+  composes: base;
+  font-size: 1rem;
+  background-color: #F5F5F5;
+  color: rgb(82, 82, 82);
+  font-weight: 400;
+  border: 1px solid rgb(189, 189, 189);
+}
