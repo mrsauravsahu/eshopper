@@ -3,7 +3,7 @@ import { mockItems } from '../mockdata/api';
 import { products } from '../mockdata/app';
 import { getItems } from './api';
 
-describe(getItems.name, () => {
+describe('api', () => {
   let axiosGetMock;
 
   beforeEach(() => {
@@ -12,21 +12,22 @@ describe(getItems.name, () => {
       .mockResolvedValue({ data: null });
   });
 
-  test('should get items from GET /items', async () => {
-    axiosGetMock.mockResolvedValue({ data: { data: [] } });
-    await getItems();
-    expect(axiosGetMock).toHaveBeenCalledWith('/items');
-  });
-
-  test('should map the response based on how the app needs', async () => {
-    axiosGetMock.mockResolvedValue({
-      data: {
-        data: mockItems,
-      },
+  describe(getItems.name, () => {
+    test('should get items from GET /items', async () => {
+      axiosGetMock.mockResolvedValue({ data: { data: [] } });
+      await getItems();
+      expect(axiosGetMock).toHaveBeenCalledWith('/items');
     });
 
-    const items = await getItems();
-    expect(items)
-      .toEqual(products);
+    test('should map the response based on how the app needs', async () => {
+      axiosGetMock.mockResolvedValue({
+        data: {
+          data: mockItems,
+        },
+      });
+
+      const items = await getItems();
+      expect(items).toEqual(products);
+    });
   });
 });
