@@ -25,7 +25,7 @@
 }
 
 .image {
-    height: 16rem;
+    width: max(16rem, 100%);
 }
 
 .name {

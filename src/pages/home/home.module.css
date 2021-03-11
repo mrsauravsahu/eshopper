@@ -9,3 +9,9 @@
     padding: 1rem;
     max-width: 100rem;
 }
+
+@media (max-width: 30rem) {
+    .products {
+        padding: 0;
+    }
+}
