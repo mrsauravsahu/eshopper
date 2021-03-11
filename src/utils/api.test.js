@@ -1,7 +1,7 @@
 import axios from 'axios';
-import { mockItems } from '../mockdata/api';
+import { mockItems, mockOrders } from '../mockdata/api';
 import { products } from '../mockdata/app';
-import { getItems } from './api';
+import { getItems, getOrders } from './api';
 
 describe('api', () => {
   let axiosGetMock;
@@ -28,6 +28,20 @@ describe('api', () => {
 
       const items = await getItems();
       expect(items).toEqual(products);
+    });
+  });
+
+  describe(getOrders.name, () => {
+    test('should get orders from GET /orders', async () => {
+      axiosGetMock.mockResolvedValue({ data: { data: [] } });
+      await getOrders();
+      expect(axiosGetMock).toHaveBeenCalledWith('/orders');
+    });
+
+    test('should return orders array', async () => {
+      axiosGetMock.mockResolvedValue({ data: { data: mockOrders } });
+      const orders = await getOrders();
+      expect(orders).toEqual(mockOrders);
     });
   });
 });

@@ -17,3 +17,10 @@ export const getItems = async () => {
 
   return mappedItems;
 };
+
+export const getOrders = async () => {
+  const getOrdersResponse = await axios.get('/orders');
+  const ordersJson = getOrdersResponse.data.data;
+
+  return ordersJson;
+};
