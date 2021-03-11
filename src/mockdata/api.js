@@ -57,3 +57,29 @@ export const mockOrders = [
     date: 1615122649963,
   },
 ];
+
+export const mockCreateOrderItemsPayload = {
+  items: [
+    {
+      id: 1,
+      name: 'apple',
+      price: 120,
+      count: 1,
+      category: 'Fruits & Vegatables',
+    },
+  ],
+};
+
+export const mockCreatedOrder = {
+  id: 1,
+  date: 1615465957341,
+  items: [
+    {
+      id: 1,
+      name: 'apple',
+      price: 120,
+      count: 1,
+      category: 'Fruits & Vegatables',
+    },
+  ],
+};

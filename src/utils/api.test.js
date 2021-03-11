@@ -1,15 +1,22 @@
 import axios from 'axios';
-import { mockItems, mockOrders } from '../mockdata/api';
+import {
+  mockCreatedOrder, mockCreateOrderItemsPayload, mockItems, mockOrders,
+} from '../mockdata/api';
 import { products } from '../mockdata/app';
-import { getItems, getOrders } from './api';
+import { createOrder, getItems, getOrders } from './api';
 
 describe('api', () => {
   let axiosGetMock;
+  let axiosPostMock;
 
   beforeEach(() => {
-    axiosGetMock = jest
-      .spyOn(axios, 'get')
-      .mockResolvedValue({ data: null });
+    axiosGetMock = jest.spyOn(axios, 'get');
+    axiosGetMock.mockClear();
+    axiosGetMock.mockResolvedValue({ data: null });
+
+    axiosPostMock = jest.spyOn(axios, 'post');
+    axiosPostMock.mockClear();
+    axiosPostMock.mockResolvedValue({ data: null });
   });
 
   describe(getItems.name, () => {
@@ -42,6 +49,20 @@ describe('api', () => {
       axiosGetMock.mockResolvedValue({ data: { data: mockOrders } });
       const orders = await getOrders();
       expect(orders).toEqual(mockOrders);
+    });
+  });
+
+  describe(createOrder.name, () => {
+    test('should create order with POST /orders and payload', async () => {
+      axiosPostMock.mockResolvedValue({ data: { data: {} } });
+      await createOrder(mockCreateOrderItemsPayload);
+      expect(axiosPostMock).toHaveBeenLastCalledWith('/orders', mockCreateOrderItemsPayload);
+    });
+
+    test('should return created order', async () => {
+      axiosPostMock.mockResolvedValue({ data: { data: mockCreatedOrder } });
+      const createdOrder = await createOrder(mockCreateOrderItemsPayload);
+      expect(createdOrder).toEqual(mockCreatedOrder);
     });
   });
 });
