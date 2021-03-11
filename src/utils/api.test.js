@@ -1,4 +1,6 @@
 import axios from 'axios';
+import { mockItems } from '../mockdata/api';
+import { products } from '../mockdata/app';
 import { getItems } from './api';
 
 describe(getItems.name, () => {
@@ -19,31 +21,12 @@ describe(getItems.name, () => {
   test('should map the response based on how the app needs', async () => {
     axiosGetMock.mockResolvedValue({
       data: {
-        data: [
-          {
-            id: 1,
-            name: 'apple',
-            price: 120,
-            count: 20,
-            category: 'Fruits & Vegatables',
-          },
-        ],
+        data: mockItems,
       },
     });
 
     const items = await getItems();
     expect(items)
-      .toEqual([
-        {
-          id: 1,
-          name: 'apple',
-          manufacturer: 'FreshO',
-          unitPrice: 120,
-          imageUrl: 'img/fruits/apple.png',
-          quantityInBasket: 0,
-          quantityAvailable: 20,
-          category: 'Fruits & Vegatables',
-        },
-      ]);
+      .toEqual(products);
   });
 });

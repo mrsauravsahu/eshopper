@@ -12,7 +12,7 @@ export const getItems = async () => {
     category: item.category,
     manufacturer: 'FreshO',
     quantityInBasket: 0,
-    imageUrl: `img/${item.category.split(' ')[0].toLowerCase()}/${item.name}.png`,
+    imageUrl: `img/${item.category.split(' ')[0].toLowerCase()}/${item.name.replace(' ', '').toLowerCase()}.png`,
   }));
 
   return mappedItems;
