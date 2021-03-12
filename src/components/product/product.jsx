@@ -17,6 +17,10 @@ export const Product = ({ product, onIncrement, onDecrement }) => (
       src={product.imageUrl}
       alt={`Purchase ${product.name}`}
       className={styles.image}
+      onError={(event) => {
+        // eslint-disable-next-line no-param-reassign
+        event.target.src = 'img/product-fallback.png';
+      }}
     />
     <div className={styles.manufacturer}>{product.manufacturer}</div>
     <div className={styles.name}>{product.name}</div>
