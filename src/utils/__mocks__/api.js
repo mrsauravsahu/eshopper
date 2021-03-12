@@ -1,3 +1,3 @@
-import { mockItems } from '../../mockdata/api';
+import { mockProducts } from '../../mockdata/app';
 
-export const getItems = jest.fn(() => mockItems);
+export const getItems = jest.fn(() => mockProducts);

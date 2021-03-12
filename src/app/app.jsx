@@ -1,12 +1,18 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { HashRouter, Route, Switch } from 'react-router-dom';
 import { Nav } from '../components/nav/nav';
 import { Cart } from '../pages/cart/cart';
 import { Checkout } from '../pages/checkout/checkout';
 import { Home } from '../pages/home/home';
+import { getItems } from '../utils/api';
 
 export const App = () => {
   const [products, setProducts] = useState([]);
+
+  useEffect(async () => {
+    const productList = await getItems();
+    setProducts(productList);
+  }, []);
 
   const onIncrement = (id, currentQuantity) => {
     setProducts({

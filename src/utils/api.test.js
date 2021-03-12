@@ -2,7 +2,7 @@ import axios from 'axios';
 import {
   mockCreatedOrder, mockCreateOrderItemsPayload, mockItems, mockOrders,
 } from '../mockdata/api';
-import { products } from '../mockdata/app';
+import { mockProducts } from '../mockdata/app';
 import { createOrder, getItems, getOrders } from './api';
 
 describe('api', () => {
@@ -34,7 +34,7 @@ describe('api', () => {
       });
 
       const items = await getItems();
-      expect(items).toEqual(products);
+      expect(items).toEqual(mockProducts);
     });
   });
 
