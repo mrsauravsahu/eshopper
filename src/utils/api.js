@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export const getItems = async () => {
-  const getItemsResponse = await axios.get('/items');
+  const getItemsResponse = await axios.get('/api/items');
   const itemJson = getItemsResponse.data.data;
 
   const mappedItems = itemJson.map((item) => ({
@@ -19,14 +19,14 @@ export const getItems = async () => {
 };
 
 export const getOrders = async () => {
-  const getOrdersResponse = await axios.get('/orders');
+  const getOrdersResponse = await axios.get('/api/orders');
   const ordersJson = getOrdersResponse.data.data;
 
   return ordersJson;
 };
 
 export const createOrder = async (order) => {
-  const createdOrderResponse = await axios.post('/orders', order);
+  const createdOrderResponse = await axios.post('/api/orders', order);
   const createdOrder = createdOrderResponse.data.data;
   return createdOrder;
 };

@@ -20,10 +20,10 @@ describe('api', () => {
   });
 
   describe(getItems.name, () => {
-    test('should get items from GET /items', async () => {
+    test('should get items from GET /api/items', async () => {
       axiosGetMock.mockResolvedValue({ data: { data: [] } });
       await getItems();
-      expect(axiosGetMock).toHaveBeenCalledWith('/items');
+      expect(axiosGetMock).toHaveBeenCalledWith('/api/items');
     });
 
     test('should map the response based on how the app needs', async () => {
@@ -39,10 +39,10 @@ describe('api', () => {
   });
 
   describe(getOrders.name, () => {
-    test('should get orders from GET /orders', async () => {
+    test('should get orders from GET /api/orders', async () => {
       axiosGetMock.mockResolvedValue({ data: { data: [] } });
       await getOrders();
-      expect(axiosGetMock).toHaveBeenCalledWith('/orders');
+      expect(axiosGetMock).toHaveBeenCalledWith('/api/orders');
     });
 
     test('should return orders array', async () => {
@@ -53,10 +53,10 @@ describe('api', () => {
   });
 
   describe(createOrder.name, () => {
-    test('should create order with POST /orders and payload', async () => {
+    test('should create order with POST /api/orders and payload', async () => {
       axiosPostMock.mockResolvedValue({ data: { data: {} } });
       await createOrder(mockCreateOrderItemsPayload);
-      expect(axiosPostMock).toHaveBeenLastCalledWith('/orders', mockCreateOrderItemsPayload);
+      expect(axiosPostMock).toHaveBeenLastCalledWith('/api/orders', mockCreateOrderItemsPayload);
     });
 
     test('should return created order', async () => {
