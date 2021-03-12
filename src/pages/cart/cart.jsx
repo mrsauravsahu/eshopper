@@ -42,5 +42,5 @@ export const Cart = ({ cart }) => {
 };
 
 Cart.propTypes = {
-  cart: PropTypes.arrayOf(ProductPropType).isRequired,
+  cart: PropTypes.arrayOf(PropTypes.shape(ProductPropType)).isRequired,
 };
